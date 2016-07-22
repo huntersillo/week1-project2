@@ -1,26 +1,20 @@
 /*
 =======================================================
-
 ** Week 1 - Project 2 **
 *** Arrays for Days! ***
-
 Below are a number of problems for you to solve
 using JS. The JS code can be written below each
 problem and the result can be logged to the console.
-
 In order to make the results easy to read,
 please use console.log("Question #") to declare the
 problem number being solved followed by console.log(yourAnswer) after each question.
-
 For any methods that we didn't cover, please refer to the Array Documentation.
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
 Discovering new things is fun and a great way to learn!!
-
 EXAMPLE:
 1. Log your 'hello world' to the console.
 console.log("Question 1")
 console.log("hello world")
-
 BASIC TRACK: 1-12
 ADVANCED TRACK: 13-18
 =======================================================
@@ -31,6 +25,12 @@ ADVANCED TRACK: 13-18
 //    Use any method you choose to add at least 4 items to it.
 
 console.log("Question 1");
+var cars = ['Volkwagen', 'Audi', 'Mercedes', 'BMW'];
+cars.push('toyota');
+cars.unshift('ferrari');
+cars.splice(1,2,'oldsmobile','ford');
+console.log(cars);
+console.log(cars.length);
 
 // 2. Add an additional item to the beginning of your array.
 
@@ -41,8 +41,16 @@ console.log("Question 1");
 // 5. Log to the console: 'The current length of the array is....' using the .length method
 
 // Use the following Array for questions 6-9:
+console.log('question 2');
 var things = ['mug', 'book', 'mouse', 'plant', 'sunglasses'];
+things.splice(2,1,'keyboad');
+var together = things.join(' & ');
 
+console.log(together);
+things.shift(),
+console.log(things)
+things.length = 0;
+console.log(things);
 // 6. Change 'mouse' to 'keyboard'
 
 // 7. Combine all of the elements of the array into a string.
@@ -54,7 +62,8 @@ var things = ['mug', 'book', 'mouse', 'plant', 'sunglasses'];
 
 // Use the following array for question 10:
 var people = ['Bill', 'Ted', 'Emily', 'Andrea', 'Doug'];
-
+people.sort();
+console.log(people);
 // 10. Arrange the items alphabetically. Store this Array as orderedPeople
 
 // 11. Create an array of arrays with the following three arrays:
@@ -68,7 +77,8 @@ var array4 = [
                 ["Bulldog", "Lab", "Dalmation", "Beagle"],
                 ["White", "Black", "Spotted", "Tri-color"]
               ]
-
+array4.splice(3,0,["Fido", "Spot", "Rex", "Sparky"]);
+console.log(array4);
 // 12. Remove "Sparky" and "White" from the above array of arrays.
 
 
@@ -89,8 +99,14 @@ var campingItems = ['tent', 'hiking boots', 'picnic table', 'corn on the cob', '
 // 17. Using the Arrays below, create a single Array
 //     called numberPets whose value is [12, 5, 9, 27, 'fish', 'dog']
 var firstArray = [12, 5, 9, 27];
-var secondArray = ['fish', 'dog'];
+var secondArray = [' fish', 'dog'];
+var totalArray = [firstArray + secondArray ];
+console.log('Array: ' + totalArray);
 
 // 18: Try to arrange the following items from smallest to largest:
 var sortingNumbers = [2, 5, 98, 55, 77, 300]
+sortingNumbers.sort(function(a, b) {
+  return a - b
+});
+console.log (sortingNumbers);
 // If it doesn't sort as expected, explain why.
